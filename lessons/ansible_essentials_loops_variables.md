@@ -46,12 +46,12 @@ Modify the task that calls the `yum` module so it looks like the following:
        yum:
          name: "{{ item }}"
          state: present
-       with_items: "{{ httpd_packages }}"
+       loop: "{{ httpd_packages }}"
 ```
 
 We are introducing two new elements with this task:
 
- - **`with_items:`** - This keyword is used to initiate a loop.  The loop will iterate over the `yum` module task
+ - **`loop:`** - This keyword is used to initiate a loop.  The loop will iterate over the `yum` module task
    once with each element in the `httpd_packages` list variable.
  - **`{{ item }}`** - This is a special variable that is declared by the loop itself.  With each iteration the
    value is updated to the next value in the list.  (ignore the `{{ }}` notation for now).
@@ -219,7 +219,7 @@ If you are lost, below is a full dump of what our current file looks like.  You 
        yum:
          name: "{{ item }}"
          state: present
-       with_items: "{{ httpd_packages }}"
+       loop: "{{ httpd_packages }}"
 
      - name: set httpd port
        lineinfile:

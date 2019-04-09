@@ -35,7 +35,7 @@ From the control node (which is where all future activity will take place, so we
 `ping` command.
 
 ```
-> ansible lab_servers -m ping
+> ansible lab_server -m ping
 ```
 
 This executes something called an "ansible ping", which is different from an ICMP network ping.  The purpose of this module

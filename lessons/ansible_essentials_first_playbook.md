@@ -13,12 +13,12 @@ The goal of a task is to implement modules against those hosts.
 
 For our first playbook, we are only going to write one play and two tasks.
 
-Create a new file called `install_apache.yml` on the control server.  There are two ways to do this:
+Create a new file called `apache_install.yml` on the control server.  There are two ways to do this:
 
  - From the control server using `vi`, `nano`, or any other Linux editor you are already familiar with
- - Using the web-based editor at http://ansibleallthethings.com/i/editor and clicking the `new file` button
+ - Using Visual Studio Code via Guacamole
 
-In the `install_apache.yml` file, add the following lines:
+In the `apache_install.yml` file, add the following lines:
 
 ```
 ---
@@ -47,7 +47,7 @@ Now getting to the three lines of ansible you just wrote.  These lines mean the 
 
 Now that we’ve defined your play, let’s add some tasks to get some things done. 
 
-Inside the same `install_apache.yml` file, add the following lines.  Note that the `t` in "task" but align with the `b` in "become".
+Inside the same `apache_install.yml` file, add the following lines.  Note that the `t` in "task" but align with the `b` in "become".
 Spacing continues to be important and its this spacing that establishes the parent/child relationship between elements throughout
 the yaml file.
 
@@ -109,7 +109,7 @@ Now that you’ve completed writing your playbook, it would be a shame not to ke
 
 If using `vi` use the write/quit method to save your playbook, e.g.. Esc `:wq!`
 
-And that should do it. You should now have a fully written playbook called `install_apache.yml`. You are ready to automate!
+And that should do it. You should now have a fully written playbook called `apache_install.yml`. You are ready to automate!
  
 Ansible (well, YAML really) can be a bit particular about formatting especially around indentation/spacing. When you all get back 
 to the office, read up on this YAML Syntax a bit more and it will save you some headaches later. In the meantime, your completed 
@@ -153,7 +153,7 @@ you first logged into the server).
 (or, if you are cheating this command will execute using the solution file directly):
 
 ```
-> ansible-playbook workshop_solutions/apache_install.yml
+> ansible-playbook ../workshop_solutions/apache_install.yml
 ```
 
 
