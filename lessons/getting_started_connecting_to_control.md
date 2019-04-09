@@ -6,8 +6,9 @@ node is a Red Hat Linux server that:
  - Has the Ansible toolset installed
  - Is where all automation activities are initiated
  - Is your virtual home for the rest of the day
+
 Today’s workshop infrastructure is being run in a cloud environment.
-Each student will be assigned a number, e.g. student, student2, student3.
+Each student has been assigned a number, e.g. studento1, student2, student3.
  
 Your instructor will supply you with a web site url or paper where you will find detailed info 
 for your own personal lab environment.
@@ -19,22 +20,39 @@ for your own personal lab environment.
 
 <hr>
 
-### 💪  Exercise 1.1 - Connect to control server
+### Exercise 1.1 - Get Ansible Tower License
+
+You will need a license for the Ansible Tower portion of today's workshop.  Please submit the form
+at this link to request your license now. 
+
+https://www.ansible.com/workshop-license
+
+You should receive the license within the hour.
+
+
+### Exercise 1.2- Connect to control server
+
+<div style="margin: 1em; padding: 1em; font-size: 1em; background-color:#46cc3d;">
+You can easily bypass `vi` and `ssh` by following the easy way from this link:
+<p>
+<a target="_blank" href="/guacamole/">https://ansibleallthehings.com/guacamole/</a>
+</div>
+
 Before we can begin doing super-cool automations and such, we’ve got to get a few basics out of 
 the way. Namely… ssh access to your control server.  Connect to your Red Hat Linux control server 
 using ssh.  
 
-If your laptop if Linux or Mac-based, the ssh command below will get you connected.  Replace `username`
+If your laptop if Linux or Mac-based, the ssh command below will get you connected.  Replace `student0`
 with your unique username.  Authenticate with the supplied password.
 
 ```
-> ssh username@control-server
+> ssh student0@student0.lab.ansibleallthethings.com
 ```
 
-For example, if the control server was at 192.168.30.1 and your username was student:
+For example, if the control server was at 192.168.30.1 and your username was student1:
 
 ```
-> ssh student@192.168.30.1
+> ssh student1@192.168.30.1
 ```
 
 If your laptop is Windows-based we recommend you download the [putty.exe](http://www.putty.org/).
@@ -43,6 +61,7 @@ If your laptop is Windows-based we recommend you download the [putty.exe](http:/
 
 Be sure you can log in to your control server!
 If you can’t log in start shouting, loudly, and waving your hands!
+
 
 ### ☢ Exercise 1.1 Results
 

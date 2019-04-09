@@ -37,7 +37,7 @@ $GLOBALS['LESSONS'] = [
             'lessons_getting_started_agenda' => 'Agenda',
             'lessons_getting_started_connecting_to_control' => 'Connecting to the Control Server',
             'lessons_getting_started_ansiblecfg' => 'Introducing ansible.cfg',
-            'lessons_getting_started_inventry' => 'Inventories',
+            'lessons_getting_started_inventory' => 'Inventories',
         ],
 
     'Ansible Essentials' => [
