@@ -6,7 +6,7 @@
 <?php } ?>
 
 <p>
-Before you can use the web-based editor please login using your student account.
+Before you can use the ticketing API please login using your student account.
 </p>
 
 <p>

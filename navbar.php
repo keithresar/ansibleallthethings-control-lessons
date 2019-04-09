@@ -14,15 +14,15 @@
               </a>
             </li>
             <li class="nav-item <?php echo preg_match("/^editor/",$_REQUEST['pn'])?'active':'';?>">
-              <a class="nav-link" href="/i/editor">
+              <a class="nav-link" href="/etherpad/p/ansible" target="_blank">
                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                Online Editor
+                Etherpad
               </a>
             </li>
             <li class="nav-item <?php echo preg_match("/^terminal/",$_REQUEST['pn'])?'active':'';?>">
-              <a class="nav-link" href="/i/terminal" target="_blank">
+              <a class="nav-link" href="/guacamole/" target="_blank">
                 <i class="fa fa-terminal" aria-hidden="true"></i>
-                Terminal Session
+                Guacamole
               </a>
             </li>
             <li class="nav-item">
@@ -31,14 +31,12 @@
                 TicketsNow
               </a>
             </li>
-	    <!--
             <li class="nav-item">
-              <a class="nav-link" href="https://zoom.us/j/6125321024">
+              <a class="nav-link" href="https://keithresar.my.webex.com/meet/keith.resar">
                 <i class="fa fa-desktop" aria-hidden="true"></i>
                 ScreenShare
               </a>
             </li>
-	    -->
             <li class="nav-item <?php echo preg_match("/^help/",$_REQUEST['pn'])?'active':'';?>">
               <a class="nav-link" href="/i/help">
                 <i class="fa fa-question-circle" aria-hidden="true"></i> 
