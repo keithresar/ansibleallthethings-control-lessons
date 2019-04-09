@@ -14,7 +14,7 @@ Ansible will process the above list and use the first file found. Settings in fi
 
 <hr>
 
-### 💪  Exercise 1.2 - Review ansible.cfg
+###  Exercise 1.3 - Review ansible.cfg
 
 To ease setup, and because our lab environment is so simple, we have created a basic `ansible.cfg` file for
 you which is located in your home directory.  We will use mostly the default except for a couple of values.
@@ -37,9 +37,9 @@ The three values above accomplish the following:
  - **host_key_checking** - This is a lab, so do not verify trust
  - **deprecation_warnings** - This is a lab and I did not rewrite is for the latest
    version of Ansible.  Hide the warnings so I look good
- - **inventory** - This points to the static inventory file that we explore in exercise 1.3
+ - **inventory** - This points to the static inventory file that we explore in exercise 1.4
 
-### ☢ Exercise 1.2 Results
+### ☢ Exercise 1.3 Results
 
 Review `ansible.cfg` file.  Explore the full list of configuration directives from the
 [Ansible configuration](http://docs.ansible.com/ansible/latest/intro_configuration.html)
