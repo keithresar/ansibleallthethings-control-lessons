@@ -7,6 +7,7 @@ and CLI make it easy to embed Ansible Tower into existing tools and processes.
 
 We’ll become comforatble with Ansible Tower by exploring some of its major components in this lesson:
 
+ - Getting a workshop license
  - Creating a Credential
  - Creating a Project
  - Your First Template
