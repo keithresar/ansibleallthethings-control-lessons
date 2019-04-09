@@ -20,16 +20,6 @@ for your own personal lab environment.
 
 <hr>
 
-### Exercise 1.1 - Get Ansible Tower License
-
-You will need a license for the Ansible Tower portion of today's workshop.  Please submit the form
-at this link to request your license now. 
-
-https://www.ansible.com/workshop-license
-
-You should receive the license within the hour.
-
-
 ### Exercise 1.2- Connect to control server
 
 <div style="margin: 1em; padding: 1em; font-size: 1em; background-color:#46cc3d;">

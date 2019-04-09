@@ -50,6 +50,7 @@ $GLOBALS['LESSONS'] = [
 
     'Graduating to Ansible Tower' => [
             'lessons_ansible_tower_agenda' => 'Agenda',
+            'lessons_ansible_tower_setup' => 'Accessing Tower',
             'lessons_ansible_tower_credentials' => 'Creating a Credential',
             'lessons_ansible_tower_project' => 'Creating a Project',
             'lessons_ansible_tower_template' => 'Your First Template',
