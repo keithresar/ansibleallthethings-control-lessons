@@ -88,7 +88,7 @@ special variables.
 
 <hr>
 
-### 💪  Exercise 1.3 - Review and configure your static inventory
+###  Exercise 1.4 - Review and configure your static inventory
 
 Your account has a static inventory in the .ini format in your home diretory.
 
@@ -107,7 +107,7 @@ for your lab node is `192.168.30.1` then the relevant section of your inventory 
 
 Save changes made to your file.
 
-### ☢ Exercise 1.3 Results
+### ☢ Exercise 1.4 Results
 
 The IP address for your lab node should now be defined in your `inventory` file.
 We will test this in the next exercise.  If the test fails come back to this section and verify everything
