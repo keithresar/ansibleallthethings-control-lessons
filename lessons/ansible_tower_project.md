@@ -7,13 +7,13 @@ You can manage playbooks and playbook directories by placing them into a source 
 
 <hr>
 
-### 💪  Exercise 4.3 - Creating a Project
+### Exercise 4.5 - Creating a Project
 
-Get started by navigating to the **Projects** page, whose link is towards the top-left of the screen.
+Get started by navigating to the **Projects** page from the lefthand sidebar.
 
 Add a new project with the following properties:
 
- - **Name** - `workshop - studentX` (replace with your unique student username)
+ - **Name** - `workshop`
  - **SCM Type** - Git
  - **SCM URL** - `https://github.com/keithresar/ansible-tower-demo`
  - Select the box **Update on Launch**
@@ -29,7 +29,7 @@ the git repository referenced have been successfully checked out and are accessi
 <img src="/images/tower_project_list.png" style="margin-left:2em; max-width: 80%; margin-bottom:1em;">
 
 
-### 💪  Exercise 4.4 - Viewing Permissions
+### Exercise 4.6 - Viewing Permissions
 
 Click on the **Permissions** link.
 

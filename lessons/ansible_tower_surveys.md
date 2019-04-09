@@ -14,7 +14,7 @@ Many types of questions can be asked, including multiple-choice questions.
 <hr>
 
 
-### 💪  Exercise 4.7 - Adding a Survey to Your Job Template
+### 💪Exercise 4.8 - Adding a Survey to Your Job Template
 
 Return to  the **Templates** page, whose link is towards the top-left of the screen.
 

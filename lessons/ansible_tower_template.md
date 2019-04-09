@@ -12,14 +12,14 @@ To reiterate, the job template is where we see the marriage of:
 
 <hr>
 
-### 💪  Exercise 4.5 - Create Your First New Job Template
+### Exercise 4.7 - Create Your First New Job Template
 
-Get started by navigating to the **Templates** page, whose link is towards the top-left of the screen.
+Get started by navigating to the **Templates** page.
 
 Add a new template with the following properties:
 
  - **Name** - `WF - 1 - Server`
- - **Inventory** - Select your inventory
+ - **Inventory** - Select the `Demo Inventory`
  - **Project** - Select your project
  - **Playbook** - Select `wf_Server.yml`
  - **Credential** - Select your `control server` credential
@@ -30,7 +30,7 @@ Click **Save**.
 <img src="/images/tower_template.png" style="margin-left:2em; max-width: 80%; margin-bottom:1em;">
 
 
-### 💪  Exercise 4.6 - Launch Your First Job Template
+### Exercise 4.8 - Launch Your First Job Template
 
 The playbook in this first template simulates provisioning a new server.  Launch this template
 by clicking on the **Rocket ship** link towards the right side of the list.

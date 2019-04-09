@@ -27,7 +27,7 @@ deployment.
 <hr>
 
 
-### 💪  Exercise 4.8 - Create Job Templates
+### Exercise 4.9 - Create Job Templates
 
 Create a number of new job templates, as specified below:
 (You can do this by starting each from scratch, or by duplicating an existing template and
@@ -76,7 +76,7 @@ Once complete, your list of job templates should resemble the image below:
 <img src="/images/tower_template_list_workflow_templates.png" style="margin-left:2em; max-width: 80%; margin-bottom:1em;">
 
 
-### 💪  Exercise 4.9 - Create the Workflow
+### Exercise 4.10 - Create the Workflow
 
 After creating the job templates that cover a handful of different playbooks we will now
 string them together in a workflow.
@@ -142,7 +142,7 @@ Once complete, your workflow should resemble the image below:
 <img src="/images/tower_workflow_editor.png" style="margin-left:2em; max-width: 80%; margin-bottom:1em;">
 
 
-### 💪  Exercise 4.10 - Create Your Change Request Ticket
+### Exercise 4.11 - Create Your Change Request Ticket
 
 Return to the **Ansible Workshop** site where this lesson is hosted, and click on the
 **[TicketsNow](/i/tickets)** link on the top navbar.
@@ -158,7 +158,7 @@ Create a new ticket with:
    created ticket
 
 
-### 💪  Exercise 4.12 - Execute Your Workflow
+### Exercise 4.12 - Execute Your Workflow
 
 Return to the Ansible Tower page, and launch the worjkflow by clicking on the **Rocket Ship**
 link towards the right of the Workflow entry in the list.
