@@ -105,7 +105,7 @@ Copy the `index.html.j2 we used into your role’s `templates/` directory.  Once
 module will automatically look for the template in that directory (take note of this, and update your task appropriately).
 
 ```
-> cp workshop_solutions/templates/index.html.j2 apache_basic/templates/
+> cp ../workshop_solutions/templates/index.html.j2 apache_basic/templates/
 ```
 
 **tasks**

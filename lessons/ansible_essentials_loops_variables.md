@@ -98,7 +98,7 @@ Make your new task look like this:
 ```
      - name: create web page
        template:
-         src: workshop_solutions/templates/index.html.j2
+         src: ../workshop_solutions/templates/index.html.j2
          dest: /var/www/html/index.html
 ```
 
@@ -166,7 +166,7 @@ Where you able to access the web page on your new port?
 If not, why not?
 
 
-### 💪  Exercise 2.12 - Changing Your Apache Configuration For Real Using a Handler
+### Exercise 2.14- Changing Your Apache Configuration For Real Using a Handler
 
 configuration changes to your apache web server only take affect when reloading or restarting the service.
 
