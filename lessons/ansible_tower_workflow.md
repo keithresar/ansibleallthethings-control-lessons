@@ -46,7 +46,7 @@ changing only the fields that differ)
    - **Name** - `WF - 3 - App Runtime`
    - **Inventory** - Select your inventory
    - **Project** - Select your project
-   - **Playbook** - Select `wf_App.yml`
+   - **Playbook** - Select `wf_Deploy.yml`
    - **Credential** - Select your `control server` credential
    - *The remaining fields can be left as is*
  - Server Deprovision
