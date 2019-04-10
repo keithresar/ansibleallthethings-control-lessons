@@ -118,7 +118,7 @@ Move our handler to the `handlers/main.yml` file.
 
 **playbook**
 
-Now that everything is done, we can re-write your playbook.  Create a new file `ansible_role.yml` and add the following content:
+Now that everything is done, we can re-write your playbook.  Create a new file `apache_role.yml` and add the following content:
 
 ```
 ---
