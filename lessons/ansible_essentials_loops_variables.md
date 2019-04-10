@@ -196,7 +196,7 @@ The entire handlers section will read as follows:
          state: restarted
 ```
 
-Before re-executing your playbook you will need to change the `httpd_port` to yet another value, maybe `82`.  This is
+Before re-executing your playbook you will need to change the `httpd_port` to yet another value, maybe `83` (don't use 82 though as another service is listening on it).  This is
 because the handler only fires when a change is made to the notifying task.
 
 If you are lost, below is a full dump of what our current file looks like.  You can also see this same file at 
@@ -209,7 +209,7 @@ If you are lost, below is a full dump of what our current file looks like.  You 
    become: yes
    vars:
      httpd_test_message: Hello, this is my test message
-     httpd_port: 82
+     httpd_port: 83
      httpd_packages:
        - httpd
        - mod_wsgi
@@ -254,7 +254,7 @@ Re-execute your playbook with the command below:
 Now use your browser to access your site again:
 
 ```
-http://192.168.30.1:82
+http://192.168.30.1:83
 ```
 
 One other tidbit about handlers - if you notify the same handler several times it will actually only execute once, after all
