@@ -39,12 +39,23 @@ The three values above accomplish the following:
    version of Ansible.  Hide the warnings so I look good
  - **inventory** - This points to the static inventory file that we explore in exercise 1.4
 
-### ☢ Exercise 1.3 Results
+### Exercise 1.3 Results
 
 Review `ansible.cfg` file.  Explore the full list of configuration directives from the
 [Ansible configuration](http://docs.ansible.com/ansible/latest/intro_configuration.html)
 site.  This is a huge list, and while not used within a lab environment, there are hundreds of
 tunables that make sure Ansible plays well with your existng environment.
+
+
+### Exercise 1.3 Extra Credit
+
+*If time and interest permit, consider reviewing these extra credit tasks to increase your familiarity.*
+
+The `ansible-config` CLI tool gives you more visibility into the the actual running configuration
+that's in scope given the current project, directory, and environment variables
+
+* Execute `ansible-config view` - this shows the actual `ansible.cfg` that's being executed
+* Execute `ansible-config dump` - this shows all 170 different tunables and their current values
 
 
 ### 📗 Resources
