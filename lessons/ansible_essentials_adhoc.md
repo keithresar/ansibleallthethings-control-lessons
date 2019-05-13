@@ -149,7 +149,7 @@ Perform the following tasks to create your own custom facts:
 * Login to your lab_server (not the control server)
 * Create the directory `/etc/ansible/facts.d/` and change to the newly created directory.  Every file in 
   this directory that ends with the `.fact` extension will be processed and your fact will be returned.  
-* Fact files can be filled with pure json.  Create a file `fact_json.fact` and add the following test:
+* Fact files can be filled with pure json.  Create a file `fact_json.fact` and add the following text:
 
 ```
 { "my_json_fact": "foo" }

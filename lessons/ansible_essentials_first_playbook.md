@@ -9,7 +9,7 @@ The goal of a task is to implement modules against those hosts.
 
 <hr>
 
-### 💪  Exercise 2.4 - Defining Your Play
+### Exercise 2.4 - Defining Your Play
 
 For our first playbook, we are only going to write one play and two tasks.
 
@@ -139,7 +139,7 @@ have the best luck using the solution file that already exists on your control s
 (the solution file on your control node is in `workshop_solutions/apache_install.yml`).
 
 
-### 💪  Exercise 2.6 - Running Your Playbook
+### Exercise 2.6 - Running Your Playbook
 
 Ansible playbooks are executed using a different binary than the ad-hoc command we worked with in the last section.
 
@@ -208,7 +208,7 @@ idempotent - meaning you can execute the same task repeatedly and it will only m
 match the current state.
 
 
-### 💪  Exercise 2.7 - Removing Apache
+### Exercise 2.7 - Removing Apache
 
 Now we’re going to be less explicit about how to complete the exercise.  
 
@@ -224,6 +224,18 @@ Then, execute `ansible-playbook` to affect change.
 ### ☢ Exercise 2.7 Results
 
 The solution is available in the file `workshop_solutions/apache_uninstall.yml`
+
+
+### Extra Credit
+
+*If time and interest permit, consider reviewing these extra credit tasks to increase your familiarity.*
+
+The `hosts` keyword is an incredibly powerful selector.  Your current playbook is using a single group
+named `lab_server`.  Work through some additional inputs to this keyword.
+
+* Use a wildcard entry to match groups `lab_server` and `windows_server`
+* Match by the network the lab_server is in (reference by host IP address)
+* Match members of the `lab_server` group that are not part of the `windows_server` group
 
 
 ### 📗 Resources
