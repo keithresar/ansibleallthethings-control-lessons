@@ -21,7 +21,9 @@
               }
         ?>
 
+		<?php if ($_REQUEST['pn']!='main')  { ?>
         <main role="main" class="col-sm-9 ml-sm-auto col-md-9 pt-3">
-
           <div id="<?php echo $_REQUEST['pn'];?>Wrapper">
+		<?php } ?>
+
 
