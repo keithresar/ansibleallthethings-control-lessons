@@ -27,7 +27,7 @@ load balancer membership, or modifying a change control ticket.
 
 <hr>
 
-### 💪  Exercise 2.18 - Creating Scaffolding for Your Role
+### Exercise 2.18 - Creating Scaffolding for Your Role
 
 Roles are defined by a large directory structure, replicated below:
 
@@ -58,7 +58,7 @@ Use the easy button to create this scaffolding on your control node by using the
 ```
 
 
-### 💪  Exercise 2.19 - Decomposing Your Playbook into the Role
+### Exercise 2.19 - Decomposing Your Playbook into the Role
 
 The tasks and external dependencies used in your playbook will reside within files inside the role directory `apache_simple/`
 rather than within your playbook once everything is done.
@@ -101,7 +101,7 @@ that, we defined some variables in `vars/` which have a higher precedence than d
 **templates**
 
 Roles are self-contained - no external dependencies.  This is awesome, and forces good hygiene for your "nfrastructure as code".
-Copy the `index.html.j2 we used into your role’s `templates/` directory.  Once that’s done, any task that uses the `template`
+Copy the `index.html.j2` we used into your role’s `templates/` directory.  Once that’s done, any task that uses the `template`
 module will automatically look for the template in that directory (take note of this, and update your task appropriately).
 
 ```
@@ -166,6 +166,29 @@ ok: [54.84.199.50]
 PLAY RECAP *****************************************************************************************************************************************************
 54.84.199.50               : ok=5    changed=0    unreachable=0    failed=0
 ```
+
+
+### Extra Credit
+
+*If time and interest permit, consider reviewing these extra credit tasks to increase your familiarity.*
+
+Roles and tasks can both exist simultaneously within a play.  Add in a number of debug tasks that use
+the following general form:
+
+```
+  - debug:
+      msg: My message
+```
+
+Now create debug tasks in the following sections:
+
+* **`tasks:`** - set message to note this is in tasks
+* **`pre_tasks:`** - set message to note this is in pre_tasks
+* **`post_tasks:`** - set message to note this is in post_tasks
+
+Execute your playbook and review the output.  What order are tasks and and roles executed in?  In an
+effort to create more maintainable playbooks what keywords would you use to execute tasks in
+conjunction with roles?
 
 
 ### 📗 Resources
