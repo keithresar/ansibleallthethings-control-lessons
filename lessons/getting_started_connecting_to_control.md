@@ -8,7 +8,7 @@ node is a Red Hat Linux server that:
  - Is your virtual home for the rest of the day
 
 Today’s workshop infrastructure is being run in a cloud environment.
-Each student has been assigned a number, e.g. studento1, student2, student3.
+Each student has been assigned a number, e.g. student1, student2, student3.
  
 Your instructor will supply you with a web site url or paper where you will find detailed info 
 for your own personal lab environment.
@@ -20,13 +20,16 @@ for your own personal lab environment.
 
 <hr>
 
-### Exercise 1.2- Connect to control server
+You can connect with the control server using any of the following software combinations.  Based on
+your experience level with the tools and what is permitted from your laptop select the best option:
 
-<div style="margin: 1em; padding: 1em; font-size: 1em; background-color:#46cc3d;">
-You can easily bypass `vi` and `ssh` by following the easy way from this link:
-<p>
-<a target="_blank" href="/guacamole/">https://ansibleallthehings.com/guacamole/</a>
-</div>
+* Remote Desktop (using `mstsc` on Windows or download [Microsoft Remote Desktop](https://itunes.apple.com/us/app/microsoft-remote-desktop-10/id1295203466?mt=12) on a Mac).  This gives you a native experience and allows you to use the Visual Studio Code IDE
+* CLI only - using `ssh` and either `vi` or `nano` for an editor - see connection instructions below.
+* Remote Desktop via Web browser via the **Guacamole** link in the top menu bar.
+
+
+### Exercise 1.2- Connect to control server via ssh
+
 
 Before we can begin doing super-cool automations and such, we’ve got to get a few basics out of 
 the way. Namely… ssh access to your control server.  Connect to your Red Hat Linux control server 
