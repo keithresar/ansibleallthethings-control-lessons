@@ -158,7 +158,7 @@ Perform the following tasks to create your own custom facts:
 * Fact files can also be executable.  If your fact file is marked as execuable Ansible will run it and
   return the `json` output it expects from stdout.  Create a new file `fact_bash.fact` with the following
   content, execute `chmod +x fact_bash.fact`.  Execute the file with the command `./fact_bash.fact` to
-  make sure there are no syntax errors.
+  make sure there are no syntax errors
 
 ```
 #!/bin/bash
@@ -168,10 +168,11 @@ echo "{\"my_bash_fact\" : \"Date: ${DATE}\"}"
 
 ```
 
-* Back on the control server, execute the ad hoc command to show your custom facts:
+* Back on the control server, execute the ad hoc command to show your custom facts.  Search for `my_` to
+  find your custom facts.  Notice how the are integrated into the standard facts
 
 ```
-> ansible all -m setup -a 'filter=my_'
+> ansible all -m setup | less'
 ```
 
 ### 📗 Resources
