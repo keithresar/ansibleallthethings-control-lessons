@@ -1,7 +1,7 @@
 # Ad-hoc Commands
 
 Ansible can be run in two modes.  It can be used as a system administration tool to run ad hoc commands against a grouping of assets.
-Since the authentication and connectivity is already setup, this is an easy was to quickly interrogate a group of servers.  
+Since the authentication and connectivity are already setup, this is an easy way to quickly interrogate a group of servers.  
 They are very useful when you simply need to do one or two things quickly and often, to many remote nodes.
 The second method of using ansible is more structured and repeatable - we will show that later.
 
@@ -23,7 +23,7 @@ Like many Linux commands, ansible allows for long-form options as well as short-
  
 <hr>
 
-### 💪  Exercise 2.1 - Ansible Ping
+### Exercise 2.1 - Ansible Ping
 
 For our first exercise, we are going to run some ad-hoc commands to help you get a feel for how Ansible works. 
 During our previous exercise we configured your inventory to add your personal lab server to the `lab_server` group.
@@ -72,7 +72,7 @@ If successful, the command line output should be entirely green and look like th
 }
 ```
 
-### 💪  Exercise 2.2 - Raw Commands
+### Exercise 2.2 - Raw Commands
 
 Still in the context of general sys-admin work, we can run any valid unix commands across our fleet of hosts.
 
@@ -95,7 +95,7 @@ Try executing other common commands, like:
 Each of the commands should return the command output entirely in green.
 
 
-### 💪  Exercise 2.3 - Getting Facts
+### Exercise 2.3 - Getting Facts
 
 Switching gears a bit, we can also use the ad-hoc command to get access to a list of facts from our target server.
 Facts consist of the list of all information known about a target host, for exmaple: IP addresses, alternate hostnames,
@@ -136,6 +136,43 @@ JSON is built on two structures:
  - A collection of name/value pairs
  - An ordered list of values. In most languages, this is realized as an array or list
 
+
+### Extra Credit
+
+*If time and interest permit, consider reviewing these extra credit tasks to increase your familiarity.*
+
+You can add custom facts as well.  These can be defined on the target server and they are automatically merged
+in with the default facts that setup returns for us.
+
+Perform the following tasks to create your own custom facts:
+
+* Login to your lab_server (not the control server)
+* Create the directory `/etc/ansible/facts.d/` and change to the newly created directory.  Every file in 
+  this directory that ends with the `.fact` extension will be processed and your fact will be returned.  
+* Fact files can be filled with pure json.  Create a file `fact_json.fact` and add the following test:
+
+```
+{ "my_json_fact": "foo" }
+```
+
+* Fact files can also be executable.  If your fact file is marked as execuable Ansible will run it and
+  return the `json` output it expects from stdout.  Create a new file `fact_bash.fact` with the following
+  content, execute `chmod +x fact_bash.fact`.  Execute the file with the command `./fact_bash.fact` to
+  make sure there are no syntax errors.
+
+```
+#!/bin/bash
+
+DATE=`date`
+echo "{\"my_bash_fact\" : \"Date: ${DATE}\"}"
+
+```
+
+* Back on the control server, execute the ad hoc command to show your custom facts:
+
+```
+> ansible all -m setup -a 'filter=my_'
+```
 
 ### 📗 Resources
 

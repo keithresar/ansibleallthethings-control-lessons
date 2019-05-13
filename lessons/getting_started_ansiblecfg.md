@@ -54,7 +54,9 @@ tunables that make sure Ansible plays well with your existng environment.
 The `ansible-config` CLI tool gives you more visibility into the the actual running configuration
 that's in scope given the current project, directory, and environment variables
 
-* Execute `ansible-config view` - this shows the actual `ansible.cfg` that's being executed
+* Execute `ansible-config view` - this shows the actual `ansible.cfg` that's being executed.  
+  Execute the same command from your home directory and from inside the `workshop/` directory,
+  notice how the output differs.
 * Execute `ansible-config dump` - this shows all 170 different tunables and their current values
 
 
