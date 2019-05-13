@@ -43,7 +43,7 @@ Now getting to the three lines of ansible you just wrote.  These lines mean the 
    This enables user privilege escalation. While the default is sudo,  su, pbrun, and several others are also supported
 
 
-### 💪  Exercise 2.5 - Adding Tasks to Your Play
+### Exercise 2.5 - Adding Tasks to Your Play
 
 Now that we’ve defined your play, let’s add some tasks to get some things done. 
 

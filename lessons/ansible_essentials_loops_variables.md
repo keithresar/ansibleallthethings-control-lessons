@@ -5,7 +5,7 @@ conditions, variables, and loops.  In the next excercise we explore these.
 
 <hr>
 
-### 💪  Exercise 2.8 - Defining Variables
+### Exercise 2.8 - Defining Variables
 
 Create a new ansible playbook file named `apache_basic.yml`.
 For an easy start you can copy all the content from your previous `apache_install.yml` playbook and
@@ -36,7 +36,7 @@ Modify the play definition to add in the `vars` definition below.
        - mod_wsgi
 ```
 
-### 💪  Exercise 2.9 - Using Variables in a Loop
+### Exercise 2.9 - Using Variables in a Loop
 
 Modify the task that calls the `yum` module so it looks like the following:
 
@@ -56,13 +56,13 @@ We are introducing two new elements with this task:
  - **`{{ item }}`** - This is a special variable that is declared by the loop itself.  With each iteration the
    value is updated to the next value in the list.  (ignore the `{{ }}` notation for now).
 
-This task will effective run the following two operations for us:
+This task will effectively run the following two operations for us:
 
  - Install package httpd
  - Install package mod_wsgi
 
 
-### 💪  Exercise 2.10 - Configure Apache
+### Exercise 2.10 - Configure Apache
 
 Ansible provides an awesome toolset for managing files and configurations.  One element of this is available from the
 `lineinfile` module.  This module garauntees that a line is present/absent or set to contain specific content.
@@ -82,7 +82,7 @@ apache is listening on.  Since we only modified a specific line, there is no ris
 which makes patches safer and also allows us to execute this standardization across hosts with a divergent configuration.
 
 
-### 💪  Exercise 2.11 - Make Your Web Page
+### Exercise 2.11 - Make Your Web Page
 
 If you access your web server now you will see a default placeholder page.  We can do better than that.
 
@@ -110,7 +110,7 @@ Here is a bit more detail on the flow:
  - If the newly generated file on your control server differs from what exists at the target,
    ansible copies the new file to the target
 
-Do not skim over this - the `template` module is a game changer if you are coming from managing things from a bash script.
+Do not skim over this - the `template` module is a game changer if you are coming from managing things using a bash script.
 
 The template source file we are referring to contains the following:
 
@@ -124,7 +124,7 @@ Page is hosted on {{ ansible_host }} and should be listening on port {{ httpd_po
 
 Let’s start examining the interesting elements introduced in this file:
 
- - Variables in the file, much like in our playbook, havbe the `{{` and `}}` to signify the start and end of what’s processed
+ - Variables in the file, much like in our playbook, have the `{{` and `}}` to signify the start and end of what’s processed
    by the `jinja2` templating engine.  Any text in the file outside of the double mustache is ignored.  Most of the time
    you can take a known good file and replace a few elements with these variables and you are ready to rock.
  - The `| default('...')` is a filter - `jinja2` provides a few dozen of these - to further modify what is ultimately
@@ -133,7 +133,7 @@ Let’s start examining the interesting elements introduced in this file:
 Feel free to review the [template module](http://docs.ansible.com/ansible/latest/template_module.html) documentation for more detail.
 
 
-### 💪  Exercise 2.12 - Execute Your Playbook
+### Exercise 2.12 - Execute Your Playbook
 
 Time to execute your playbook:
 
@@ -145,7 +145,7 @@ If everything goes right, when you point your web browser at your lab server hos
 your new web page, custom content and all, instead of the default placeholder.
 
 
-### 💪  Exercise 2.13 - Changing Your Apache Configuration Again
+### Exercise 2.13 - Changing Your Apache Configuration Again
 
 Web over port 80 is so boring.  Change the `httpd_port` variable to `81` and re-execute your playbook.
 
@@ -166,9 +166,9 @@ Where you able to access the web page on your new port?
 If not, why not?
 
 
-### Exercise 2.14- Changing Your Apache Configuration For Real Using a Handler
+### Exercise 2.14 - Changing Your Apache Configuration For Real Using a Handler
 
-configuration changes to your apache web server only take affect when reloading or restarting the service.
+Configuration changes to your apache web server only take affect when reloading or restarting the service.
 
 Since the web server was already running your `start httpd` task never ran again.  We need to fix that.
 
@@ -259,6 +259,19 @@ http://192.168.30.1:83
 
 One other tidbit about handlers - if you notify the same handler several times it will actually only execute once, after all
 the tasks have completed.  This decreases run time and dramatically increases safety.
+
+
+
+### Extra Credit
+
+*If time and interest permit, consider reviewing these extra credit tasks to increase your familiarity.*
+
+* Remember all those levels of variable precedence?  Try to change your `httpd_test_message` based on:
+  * Add a task-level var that changes the test message
+  * Pass an `extra-var` to the `ansible-playbook` CLI
+  * Add that uses the `set_facts` module to change the test message.  It should reference the `port` variable
+    and append to the exsiting `httpd_test_message` so the message reads "Hello, this is my test message
+    on port 80"
 
 
 
