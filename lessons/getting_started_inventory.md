@@ -107,11 +107,20 @@ for your lab node is `192.168.30.1` then the relevant section of your inventory 
 
 Save changes made to your file.
 
-### ☢ Exercise 1.4 Results
+### Exercise 1.4 Results
 
 The IP address for your lab node should now be defined in your `inventory` file.
 We will test this in the next exercise.  If the test fails come back to this section and verify everything
 was defined as expected.
+
+
+### Extra Credit
+
+*If time and interest permit, consider reviewing these extra credit tasks to increase your familiarity.*
+
+Spend a few minutes reviewing the two resources listed below.  Nearly all Ansible implementations take
+advantage of dynamic inventories.  Take note of the metadata that come with these inventories and how groups
+are automatically created.
 
 
 ### 📗 Resources

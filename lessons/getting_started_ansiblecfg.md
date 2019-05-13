@@ -47,7 +47,7 @@ site.  This is a huge list, and while not used within a lab environment, there a
 tunables that make sure Ansible plays well with your existng environment.
 
 
-### Exercise 1.3 Extra Credit
+### Extra Credit
 
 *If time and interest permit, consider reviewing these extra credit tasks to increase your familiarity.*
 
